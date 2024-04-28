@@ -2,28 +2,30 @@ html,
 body {
     height: 100%;
     margin: 0;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .container {
     border: 1px solid rgb(202, 202, 202);
     width: 300px;
     padding: 30px;
-    
+
 }
- 
+
 .img {
     width: 300px;
     height: 300px;
     background-image: url(../images/бесщёкая.jpg);
     background-position: center;
     background-size: cover;
-    
+
 }
+
 .existence {
     font-size: 20px;
     transition: .5s;
 }
+
 .name {
     font-size: 20px;
 }
@@ -31,5 +33,34 @@ body {
 .price {
     font-size: 24px;
 }
-.red { color: red;}
-.green { color: green; }
+
+.red1 {
+    color: red
+}
+
+.green2 {
+    color: green
+}
+
+.button {
+    padding: 7px 10px;
+    font-size: 16px;
+    /* background-color: rgb(220, 252, 168);
+    border: 2px solid rgb(156, 184, 115);
+    color: rgb(78, 116, 21); */
+    color: white;
+    background-color: #6667ab;
+    border: 2px solid #6667ab;
+    border-radius: 5px;
+    cursor: pointer;
+
+    transition: .2s;
+}
+.button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 0 2px rgba(0, 0, 0, 0.2);
+}
+.button:active {
+    transform: unset;
+    box-shadow: unset;
+}
