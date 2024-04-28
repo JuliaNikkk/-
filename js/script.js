@@ -1,14 +1,14 @@
 
 function checkColor() {
     const tmp = document.getElementsByClassName("existence")
-    for (let i=0; i < tmp.length; i++){
+    for (let i = 0; i < tmp.length; i++) {
         const el = tmp[i];
         const txt = el.innerText
-        if (txt == 'В наличии'){
+        if (txt == 'В наличии') {
             el.classList.add('green2');
         }
-        else if (txt == 'Нет в наличии'){
-            el.classList.add ('red1');
+        else if (txt == 'Нет в наличии') {
+            el.classList.add('red1');
         }
     }
 
@@ -16,14 +16,14 @@ function checkColor() {
 checkColor();
 
 
-function txtChange(el){
+function txtChange(el) {
     const txt = el.innerText
-if (txt == 'Добавить в корзину'){
-    el.innerText = 'В корзине';
-}    
-else if (txt == 'В корзине'){
-    el.innerText = 'Добавить в корзину'
-}
+    if (txt == 'Добавить в корзину') {
+        el.innerText = 'В корзине';
+    }
+    else if (txt == 'В корзине') {
+        el.innerText = 'Добавить в корзину'
+    }
 
     // if ()
 }
