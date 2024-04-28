@@ -1,0 +1,35 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.container {
+    border: 1px solid rgb(202, 202, 202);
+    width: 300px;
+    padding: 30px;
+    
+}
+ 
+.img {
+    width: 300px;
+    height: 300px;
+    background-image: url(../images/бесщёкая.jpg);
+    background-position: center;
+    background-size: cover;
+    
+}
+.existence {
+    font-size: 20px;
+    transition: .5s;
+}
+.name {
+    font-size: 20px;
+}
+
+.price {
+    font-size: 24px;
+}
+.red { color: red;}
+.green { color: green; }
