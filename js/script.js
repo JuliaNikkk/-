@@ -24,10 +24,12 @@ function txtChange(el) {
     else if (txt == 'В корзине') {
         el.innerText = 'Добавить в корзину'
     }
-
+    el.classList.toggle('buttonGray')
 }
 function showInfo(el){
     el.classList.toggle('showList')
+}
+function clrChange(el){
 }
 
 // let bublik = 'Бубли'

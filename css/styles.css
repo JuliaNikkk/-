@@ -76,6 +76,10 @@ body {
     transform: unset;
     box-shadow: unset;
 }
+.buttonGray{
+    background-color: grey;
+    border-color: grey;
+}
 
 .inform {
     width: 30px;
@@ -122,6 +126,7 @@ body {
     max-width: 231px;
     opacity: 0;
     pointer-events: none;
+    transition: .2s;
 }
 
 .showList > .list {
