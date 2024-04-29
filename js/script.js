@@ -25,8 +25,11 @@ function txtChange(el) {
         el.innerText = 'Добавить в корзину'
     }
 
-    // if ()
 }
+function showInfo(el){
+    el.classList.toggle('showList')
+}
+
 // let bublik = 'Бубли'
 // for (let i = 10; i > 7; i--) {
 //     if (bublik == "Бублик")
