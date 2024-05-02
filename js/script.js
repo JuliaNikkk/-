@@ -29,9 +29,16 @@ function txtChange(el) {
 function showInfo(el){
     el.classList.toggle('showList')
 }
-function clrChange(el){
+function heartColor(el){
+    const src = el.getAttribute('src')
+    if (src == 'images/heart1.svg'){
+        el.setAttribute("src",'images/heart2.svg')
+    }
+    else { 
+        el.setAttribute("src",'images/heart1.svg')
+    }
+    
 }
-
 // let bublik = 'Бубли'
 // for (let i = 10; i > 7; i--) {
 //     if (bublik == "Бублик")
