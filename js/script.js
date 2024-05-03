@@ -88,6 +88,15 @@ function createList(){
     checkColor()
 }
 createList()
+
+// function mouse(){
+//     const txtLink = document.getElementsByClassName('navbar a');
+//     txtLinc.addEventListener('mouseover', function() {
+//         element.style.backgroundColor = 'lightgray';
+//         });
+
+// }
+// mouse()
 // let bublik = 'Бубли'
 // for (let i = 10; i > 7; i--) {
 //     if (bublik == "Бублик")
