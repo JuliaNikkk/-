@@ -90,7 +90,7 @@ function createList(){
 createList()
 
 // function mouse(){
-//     const txtLink = document.getElementsByClassName('navbar a');
+//     const txtLink = document.getElementsByClassName('navbar');
 //     txtLinc.addEventListener('mouseover', function() {
 //         element.style.backgroundColor = 'lightgray';
 //         });
