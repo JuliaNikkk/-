@@ -10,6 +10,9 @@ function checkColor() {
         else if (txt == 'Нет в наличии') {
             el.classList.add('red1');
         }
+        else if (txt == 'Под заказ') {
+            el.classList.add('yel3');
+        }
     }
 
 }
@@ -63,7 +66,91 @@ const mass = [
         price: '50000 ₽',
         existence: "В наличии",
         img: 'аратинга.jpg'
-    }
+    },
+    {
+        name: "Пиррура Буроухая",
+        price: '35000 ₽',
+        existence: "В наличии",
+        img: "буроухая.jpg"
+    },
+    {
+        name: "Какарик Зелёный",
+        price: '3500 ₽',
+        existence: "В наличии",
+        img: "какарикзеленый.jpg"
+    },
+    {
+        name: "Неразлучник Розовощекий ",
+        price: '1790 ₽',
+        existence: "В наличии",
+        img: "розовощекий.png"
+    },
+    {
+        name: "Неразлучник Масковый голубой",
+        price: '3500 ₽',
+        existence: "В наличии",
+        img: "масковый.webp"
+    },
+    {
+        name: "Волнистый попугай",
+        price: '1290 ₽',
+        existence: "В наличии",
+        img: "волнистый.jpeg"
+    },
+    {
+        name: "Какаду Желтохохлый",
+        price: '225000 ₽',
+        existence: "Под заказ",
+        img: "Желтохохлый.jpg"
+    },
+    {
+        name: "Какаду Молуккский",
+        price: '230000 ₽',
+        existence: "В наличии",
+        img: "молуккский.jpg"
+    },
+    // {
+    //     name: "Какаду Желтохохлый",
+    //     price: '225000 ₽',
+    //     existence: "В наличии",
+    //     img: "Желтохохлый.jpg"
+    // },
+    {
+        name: "Rio корм для средних попугаев основной 1 кг",
+        price: '323 ₽',
+        existence: "В наличии",
+        img: "кормсред.png"
+    },
+    {
+        name: "Rio корм для крупных попугаев основной 1 кг",
+        price: '463 ₽',
+        existence: "В наличии",
+        img: "кормкруп.jpg"
+    },
+    {
+        name: "Rio корм для волнистых попугаев основной 1 кг",
+        price: '332 ₽',
+        existence: "В наличии",
+        img: "кормволн.jpg"
+    },
+    {
+        name: "Triol клетка для крупных птиц BC22 W белая 1130*900*1930 мм",
+        price: '43500 ₽',
+        existence: "В наличии",
+        img: "клеттриол1.jpeg"
+    },
+    {
+        name: "Triol клетка для крупных птиц BC23 черная 1230*1030*2030 мм",
+        price: '55000 ₽',
+        existence: "В наличии",
+        img: "клеттриол2.jpeg"
+    },
+    {
+        name: "MONTANA Cages Клетка для средних птиц Castell Nova Dome, тёмно-серая, 120х95х186см",
+        price: '90000 ₽',
+        existence: "Нет в наличии",
+        img: "монтана.jpg"
+    },
 ]
 const wrapper = document.getElementsByClassName('wrapper')[0];
 function del() {
