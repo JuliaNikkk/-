@@ -31,15 +31,15 @@ function txtChange(el) {
 function showInfo(el) {
     el.classList.toggle('showList')
 }
-function heartColor(el){
+function heartColor(el) {
     const src = el.getAttribute('src')
-    if (src == 'images/heart1.svg'){
-        el.setAttribute("src",'images/heart2.svg')
+    if (src == 'images/heart1.svg') {
+        el.setAttribute("src", 'images/heart2.svg')
     }
-    else { 
-        el.setAttribute("src",'images/heart1.svg')
+    else {
+        el.setAttribute("src", 'images/heart1.svg')
     }
-    
+
 }
 
 const mass = [
@@ -109,12 +109,6 @@ const mass = [
         existence: "В наличии",
         img: "молуккский.jpg"
     },
-    // {
-    //     name: "Какаду Желтохохлый",
-    //     price: '225000 ₽',
-    //     existence: "В наличии",
-    //     img: "Желтохохлый.jpg"
-    // },
     {
         name: "Rio корм для средних попугаев основной 1 кг",
         price: '323 ₽',
@@ -159,15 +153,15 @@ function del() {
     }
 }
 const newContainer = document.getElementsByClassName('container')[0].cloneNode(true)
-function createList(){
+function createList() {
     del()
-    for(let i = 0; i < mass.length; i++){
+    for (let i = 0; i < mass.length; i++) {
         const clone = newContainer.cloneNode(true);
         clone.getElementsByClassName('name')[0].innerText = mass[i].name
         clone.getElementsByClassName('price')[0].innerText = mass[i].price
         clone.getElementsByClassName('existence')[0].innerText = mass[i].existence
         clone.getElementsByClassName('img')[0]
-        .style.backgroundImage = `url(../images/${mass[i].img})`;
+            .style.backgroundImage = `url(../images/${mass[i].img})`;
         // `url(../images/${mass[i].img})`
         // 'url(../images/бесщёкая.jpg)'
         wrapper.appendChild(clone)
@@ -175,7 +169,42 @@ function createList(){
     checkColor()
 }
 createList()
-
+const data = [
+    {
+        icon: "voln.svg",
+        assort: "Мелкие попугаи"
+    },
+    {
+        icon: "corella.svg",
+        assort: "Средние попугаи"
+    },
+    {
+        icon: "ara.svg",
+        assort: "Большие попугаи"
+    },
+    {
+        icon: "cage.svg",
+        assort: "Товары для птиц"
+    },
+]
+const case1 = document.getElementsByClassName('case')[0];
+function delet() {
+    while (case1.firstChild) {
+        case1.removeChild(case1.firstChild);
+    }
+}
+const newPanel = document.getElementsByClassName('panel')[0].cloneNode(true)
+function createBlock() {
+    delet()
+    for (let i = 0; i < data.length; i++) {
+        const double = newPanel.cloneNode(true);
+        double.getElementsByClassName('icon')[0]
+            .style.backgroundImage = `url(../images/${data[i].icon})`;
+        double.getElementsByClassName('assort')[0].innerText = data[i].assort
+        case1.appendChild(double)
+    }
+}
+createBlock()
 // function mouse(){
 //     const txtLink = document.getElementsByClassName('navbar');
 //     txtLinc.addEventListener('mouseover', function() {
