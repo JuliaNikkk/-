@@ -231,16 +231,23 @@ z-index: 100; */
     color: white;
     right: 215px;
 }
+.case{
+    height: 200px;
+    margin: 15px;
+    display: flex;
+    justify-content: center;
+}
 .panel{
     background-color: #90c541;
     border: 1px solid #90c541;
     font-size: 20px;
     color: white;
-    border-radius: 5px;
+    border-radius: 15px;
     --s: 200px;
     width: var(--s);
     height: var(--s);
-    position: absolute;
+    position: relative;
+    margin: 0 10px;
     display: flex;
     flex-direction: column;
     justify-content: end;
