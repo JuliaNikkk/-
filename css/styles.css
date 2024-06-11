@@ -133,7 +133,11 @@ z-index: 100; */
 
     transition: .2s;
 }
-
+.button.color2 {
+    background: white;
+    color: black;
+    border: none;
+}
 .button:hover {
     transform: translateY(-2px);
     box-shadow: 0 2px 0 2px rgba(0, 0, 0, 0.2);
@@ -308,6 +312,25 @@ z-index: 100; */
 }
 .m10 {
     margin: 10px 0 5px;
+}
+.input1 {
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+}
+.reg-form {
+    justify-content: center;
+    align-items: center;
+}
+.reg {
+    padding: 20px;
+    background-color: #90c541;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+}
+.h100 {
+    height: 100%;
 }
 /* .lightgray{
     color: lightgray;
