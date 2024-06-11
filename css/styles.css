@@ -6,6 +6,10 @@
     font-family: inglobal;
 
 }
+a.container {
+    text-decoration: none !important;
+    color: unset !important;
+}
 html,
 body {
     height: 100%;
@@ -252,6 +256,7 @@ z-index: 100; */
     flex-direction: column;
     justify-content: end;
     align-items:center;
+    text-decoration: none;
 }
 .icon{
     width: 100px;
@@ -260,6 +265,22 @@ z-index: 100; */
     /* background-image: url(/images/corella.svg); */
     background-position: center;
     background-size: cover;
+}
+.footer{
+    z-index: 2;
+    position: sticky;
+    width: 100%;
+    /* top: 0px; */
+    left: 0;
+    background-color: #90c541;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    flex-direction: column;
+    color: white;
+    font-size: 20px;
 }
 
 /* .lightgray{

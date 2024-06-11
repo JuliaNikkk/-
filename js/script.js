@@ -47,7 +47,8 @@ const mass = [
         name: "Корелла безщёкая",
         price: '7100 ₽',
         existence: "В наличии",
-        img: 'бесщёкая.jpg'
+        img: 'бесщёкая.jpg',
+        href: "pages/item.html"
     },
     {
         name: "Какаду Гала",
@@ -162,6 +163,8 @@ function createList() {
         clone.getElementsByClassName('existence')[0].innerText = mass[i].existence
         clone.getElementsByClassName('img')[0]
             .style.backgroundImage = `url(../images/${mass[i].img})`;
+        clone.setAttribute("href", mass[i].href ?? "#")
+        
         // `url(../images/${mass[i].img})`
         // 'url(../images/бесщёкая.jpg)'
         wrapper.appendChild(clone)
