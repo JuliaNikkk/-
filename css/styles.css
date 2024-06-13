@@ -358,9 +358,6 @@ z-index: 100; */
 .forma{
     color: white;
 }
-.adrs{
-    text-decoration: none;
-}
 .backg{
     background-image: url(/images/oblozka.jpg);
     background-size: cover;
@@ -401,6 +398,10 @@ z-index: 100; */
 }
 .unlink {
     color: #000;
+    text-decoration: none !important;
+}
+.footer > span > a {
+    color: #fff !important;
     text-decoration: none !important;
 }
 /* .lightgray{
