@@ -197,7 +197,7 @@ z-index: 100; */
     transition: .2s;
 }
 
-.showList~.list {
+.inform:hover~.list {
     opacity: 1;
     pointer-events: all;
 }
