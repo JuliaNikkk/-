@@ -31,9 +31,11 @@
         </a>
     </div>
     <div class="wrapper">
-        <a href="#" class="container">
-            <div class="img"></div>
-            <p class="name">Корелла безщёкая</p>
+        <div class="container">
+            <a href="#" class="unlink">
+                <div class="img"></div>
+                <p class="name">Корелла безщёкая</p>
+            </a>
             <p class="price"><b>7100 ₽</b></p>
             <div class='bContainer'>
                 <button class="button" onclick="txtChange(this)">Добавить в корзину</button>
@@ -47,15 +49,31 @@
             </div>
 
             <p class="existence">В наличии</p>
-        </a>
+        </div>
 
     </div>
     <footer class="footer">
-        <address class="adrs">
+        <span class="adrs">
             Контакты для связи <a href="mailto:vsepopugi@gmail.com">vsepopugi@gmail.com</a>
-        </address>
+        </span>
         <span class="m10">Йошкар-Ола, ул. Попуговая д.123</span>
     </footer>
+    
+
+
+    <div class="backdrop" onclick="hideModal(event)">
+        <div class="modal">
+            <h3 class="tc">
+                Уточните пол птицы
+            </h3>
+            <div class="flex">
+                <button class="pol buttonGray" onclick="polChange(this)">Самец</button>
+                <button class="pol" onclick="polChange(this)">Самка</button>
+                <button class="pol" onclick="polChange(this)">Буду любить любого птенчика</button>
+            </div>
+        </div>
+    </div>
+    <script src="pages/reg.js"></script>
     <script src="js/script.js"></script>
 </body>
 

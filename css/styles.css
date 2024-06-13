@@ -122,7 +122,6 @@ z-index: 100; */
     padding: 7px 20px;
     font-size: 20px;
     background-color: rgb(0, 187, 31);
-    ;
     border: 2px solid rgb(0, 187, 31);
     color: white;
     /* color: white; */
@@ -149,8 +148,8 @@ z-index: 100; */
 }
 
 .buttonGray {
-    background-color: grey;
-    border-color: grey;
+    background-color: grey !important;
+    border-color: grey !important;
 }
 
 .inform {
@@ -353,6 +352,7 @@ z-index: 100; */
     background-color: #fff;
     border-radius: 10px;
     display: flex;
+    flex-direction: column;
 }
 .forma{
     color: white;
@@ -373,7 +373,6 @@ z-index: 100; */
     margin: 5px;
     font-size: 20px;
     background-color: rgb(0, 187, 31);
-    ;
     border: 2px solid rgb(0, 187, 31);
     color: white;
     /* color: white; */
@@ -393,9 +392,15 @@ z-index: 100; */
     transform: unset;
     box-shadow: unset;
 }
-.polGray {
-    background-color: grey;
-    border-color: grey;
+.flex {display: flex;}
+.tc {
+    text-align: center;
+    font-weight: normal;
+    margin-top: 0;
+}
+.unlink {
+    color: #000;
+    text-decoration: none !important;
 }
 /* .lightgray{
     color: lightgray;

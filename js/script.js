@@ -17,16 +17,19 @@ function checkColor() {
 
 }
 
-
+function showModal() {
+    document.getElementsByClassName("backdrop")[0].classList.add("show")
+}
 function txtChange(el) {
     const txt = el.innerText
     if (txt == 'Добавить в корзину') {
         el.innerText = 'В корзине';
+        showModal()
     }
     else if (txt == 'В корзине') {
         el.innerText = 'Добавить в корзину'
     }
-    el.classList.toggle('buttonGray')
+    el.classList.toggle('buttonGray');
 }
 function showInfo(el) {
     el.classList.toggle('showList')
@@ -39,7 +42,6 @@ function heartColor(el) {
     else {
         el.setAttribute("src", 'images/heart1.svg')
     }
-
 }
 
 const mass = [
@@ -163,7 +165,7 @@ function createList() {
         clone.getElementsByClassName('existence')[0].innerText = mass[i].existence
         clone.getElementsByClassName('img')[0]
             .style.backgroundImage = `url(../images/${mass[i].img})`;
-        clone.setAttribute("href", mass[i].href ?? "#")
+        clone.getElementsByClassName('unlink')[0].setAttribute("href", mass[i].href ?? "#")
         
         // `url(../images/${mass[i].img})`
         // 'url(../images/бесщёкая.jpg)'
@@ -208,6 +210,7 @@ function createBlock() {
     }
 }
 createBlock()
+
 // function mouse(){
 //     const txtLink = document.getElementsByClassName('navbar');
 //     txtLinc.addEventListener('mouseover', function() {
