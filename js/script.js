@@ -24,7 +24,8 @@ function txtChange(el) {
     const txt = el.innerText
     if (txt == 'Добавить в корзину') {
         el.innerText = 'В корзине';
-        showModal()
+        if (el.getAttribute("data-type") != "acsess")
+            showModal()
     }
     else if (txt == 'В корзине') {
         el.innerText = 'Добавить в корзину'
@@ -192,7 +193,7 @@ function createList() {
         clone.getElementsByClassName('img')[0]
             .style.backgroundImage = `url(../images/${mass[i].img})`;
         clone.getElementsByClassName('unlink')[0].setAttribute("href", mass[i].href ?? "#")
-
+        clone.getElementsByClassName("button")[0].setAttribute("data-type", mass[i].type)
         // `url(../images/${mass[i].img})`
         // 'url(../images/бесщёкая.jpg)'
         wrapper.appendChild(clone)
