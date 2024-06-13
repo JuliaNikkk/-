@@ -43,112 +43,138 @@ function heartColor(el) {
         el.setAttribute("src", 'images/heart1.svg')
     }
 }
-
-const mass = [
+const mass_ = [
     {
         name: "Корелла безщёкая",
         price: '7100 ₽',
         existence: "В наличии",
         img: 'бесщёкая.jpg',
-        href: "pages/item.html"
+        href: "pages/item.html",
+        type: 'middle',
     },
     {
         name: "Какаду Гала",
         price: '153000 ₽',
         existence: "Нет в наличии",
-        img: 'гала.jpg'
+        img: 'гала.jpg',
+        type: 'big'
     },
     {
         name: "Корелла щекастая",
         price: '6400 ₽',
         existence: "В наличии",
-        img: 'щекастая.png'
+        img: 'щекастая.png',
+        type: 'middle'
     },
     {
         name: "Аратинга Солнечный",
         price: '50000 ₽',
         existence: "В наличии",
-        img: 'аратинга.jpg'
+        img: 'аратинга.jpg',
+        type: 'middle'
     },
     {
         name: "Пиррура Буроухая",
         price: '35000 ₽',
         existence: "В наличии",
-        img: "буроухая.jpg"
+        img: "буроухая.jpg",
+        type: 'middle'
     },
     {
         name: "Какарик Зелёный",
         price: '3500 ₽',
         existence: "В наличии",
-        img: "какарикзеленый.jpg"
+        img: "какарикзеленый.jpg",
+        type: 'middle'
     },
     {
         name: "Неразлучник Розовощекий ",
         price: '1790 ₽',
         existence: "В наличии",
-        img: "розовощекий.png"
+        img: "розовощекий.png",
+        type: 'little'
     },
     {
         name: "Неразлучник Масковый голубой",
         price: '3500 ₽',
         existence: "В наличии",
-        img: "масковый.webp"
+        img: "масковый.webp",
+        type: 'little'
     },
     {
         name: "Волнистый попугай",
         price: '1290 ₽',
         existence: "В наличии",
-        img: "волнистый.jpeg"
+        img: "волнистый.jpeg",
+        type: 'little'
     },
     {
         name: "Какаду Желтохохлый",
         price: '225000 ₽',
         existence: "Под заказ",
-        img: "Желтохохлый.jpg"
+        img: "Желтохохлый.jpg",
+        type: 'big'
     },
     {
         name: "Какаду Молуккский",
         price: '230000 ₽',
         existence: "В наличии",
-        img: "молуккский.jpg"
+        img: "молуккский.jpg",
+        type: 'big'
     },
     {
         name: "Rio корм для средних попугаев основной 1 кг",
         price: '323 ₽',
         existence: "В наличии",
-        img: "кормсред.png"
+        img: "кормсред.png",
+        type: 'acsess'
     },
     {
         name: "Rio корм для крупных попугаев основной 1 кг",
         price: '463 ₽',
         existence: "В наличии",
-        img: "кормкруп.jpg"
+        img: "кормкруп.jpg",
+        type: 'acsess'
     },
     {
         name: "Rio корм для волнистых попугаев основной 1 кг",
         price: '332 ₽',
         existence: "В наличии",
-        img: "кормволн.jpg"
+        img: "кормволн.jpg",
+        type: 'acsess'
     },
     {
         name: "Triol клетка для крупных птиц BC22 W белая 1130*900*1930 мм",
         price: '43500 ₽',
         existence: "В наличии",
-        img: "клеттриол1.jpeg"
+        img: "клеттриол1.jpeg",
+        type: 'acsess'
     },
     {
         name: "Triol клетка для крупных птиц BC23 черная 1230*1030*2030 мм",
         price: '55000 ₽',
         existence: "В наличии",
-        img: "клеттриол2.jpeg"
+        img: "клеттриол2.jpeg",
+        type: 'acsess'
     },
     {
         name: "MONTANA Cages Клетка для средних птиц Castell Nova Dome, тёмно-серая, 120х95х186см",
         price: '90000 ₽',
         existence: "Нет в наличии",
-        img: "монтана.jpg"
+        img: "монтана.jpg",
+        type: 'acsess'
     },
+    // type: little, middle, big, acsess
 ]
+let mass = mass_;
+function changeType(type) {
+    type = type.getAttribute("id");
+    if (type == "all")
+        mass = mass_
+    else
+        mass = mass_.filter(el => el.type == type);
+    createList()
+}
 const wrapper = document.getElementsByClassName('wrapper')[0];
 function del() {
     while (wrapper.firstChild) {
@@ -166,7 +192,7 @@ function createList() {
         clone.getElementsByClassName('img')[0]
             .style.backgroundImage = `url(../images/${mass[i].img})`;
         clone.getElementsByClassName('unlink')[0].setAttribute("href", mass[i].href ?? "#")
-        
+
         // `url(../images/${mass[i].img})`
         // 'url(../images/бесщёкая.jpg)'
         wrapper.appendChild(clone)
@@ -177,19 +203,23 @@ createList()
 const data = [
     {
         icon: "voln.svg",
-        assort: "Мелкие попугаи"
+        assort: "Мелкие попугаи",
+        type: "little"
     },
     {
         icon: "corella.svg",
-        assort: "Средние попугаи"
+        assort: "Средние попугаи",
+        type: "middle"
     },
     {
         icon: "ara.svg",
-        assort: "Большие попугаи"
+        assort: "Большие попугаи",
+        type: "big"
     },
     {
         icon: "cage.svg",
-        assort: "Товары для птиц"
+        assort: "Товары для птиц",
+        type: "acsess"
     },
 ]
 const case1 = document.getElementsByClassName('case')[0];
@@ -205,8 +235,9 @@ function createBlock() {
         const double = newPanel.cloneNode(true);
         double.getElementsByClassName('icon')[0]
             .style.backgroundImage = `url(../images/${data[i].icon})`;
-        double.getElementsByClassName('assort')[0].innerText = data[i].assort
+        double.getElementsByClassName('assort')[0].innerText = data[i].assort;
         case1.appendChild(double)
+        double.setAttribute("id", data[i].type)
     }
 }
 createBlock()
